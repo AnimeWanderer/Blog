@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Blog</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --primary-color: #0077cc;
+    }
+
+    body.dark-mode {
+      --bg-color: #121212;
+      --text-color: #f5f5f5;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary-color);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    article {
+      background: #f4f4f4;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+
+    article h3 {
+      margin-top: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      padding: 0.5rem 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+    }
+
+    input, textarea {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.5rem;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Blog</h1>
+    <button id="theme-toggle">Toggle Theme</button>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#blog">Blog</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I'm KYEYUNE ALEX, a student of Information Systems and Technology. I'm passionate about tech, digital media, and using my skills to help organizations grow online.</p>
+  </section>
+
+  <section id="blog">
+    <h2>My Blog</h2>
+    <article>
+      <h3>How I Manage the School's Social Media</h3>
+      <p>Sharing some behind-the-scenes on how I plan, schedule, and design content for our school’s pages...</p>
+      <a href="#">Read more</a>
+    </article>
+    <article>
+      <h3>Balancing School Work and Tech Passion</h3>
+      <p>Being a student in tech means a lot of learning and exploration. Here's how I keep the balance...</p>
+      <a href="#">Read more</a>
+    </article>
+  </section>
+
+  <section id="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>Website Editing (HTML/CSS)</li>
+      <li>Social Media Management</li>
+      <li>Graphic Design with Canva</li>
+      <li>Basic Video Editing</li>
+      <li>Content Planning</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xvgkwlyy" method="post">
+      <label>Name:</label>
+      <input type="text" name="name" required />
+
+      <label>Email:</label>
+      <input type="email" name="email" required />
+
+      <label>Message:</label>
+      <textarea name="message" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Made by [Your Name] &copy; 2025</p>
+  </footer>
+
+  <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
